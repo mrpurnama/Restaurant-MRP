@@ -1,11 +1,9 @@
-package com.restaurant.mrp;
+package com.restaurant.mrp_1147050103;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -18,12 +16,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
-import com.restaurant.mrp.adapter.RestaurantAdapter;
-import com.restaurant.mrp.data.Session;
-import com.restaurant.mrp.model.ListRestaurantResponse;
+import com.restaurant.mrp_1147050103.adapter.RestaurantAdapter;
+import com.restaurant.mrp_1147050103.data.Session;
+import com.restaurant.mrp_1147050103.model.ListRestaurantResponse;
 
-import static com.restaurant.mrp.data.Constans.GET_LIST_RESTAURANT;
-import static com.restaurant.mrp.data.Constans.GET_SEARCH_RESTAURANT;
+import static com.restaurant.mrp_1147050103.data.Constans.GET_LIST_RESTAURANT;
+import static com.restaurant.mrp_1147050103.data.Constans.GET_SEARCH_RESTAURANT;
 
 public class DashboardActivity extends AppCompatActivity {
     RestaurantAdapter adapter;

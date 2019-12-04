@@ -1,4 +1,4 @@
-package com.restaurant.mrp.model;
+package com.restaurant.mrp_1147050103.model;
 
 import com.google.gson.annotations.SerializedName;
 

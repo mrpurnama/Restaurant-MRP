@@ -1,4 +1,4 @@
-package com.restaurant.mrp.auth;
+package com.restaurant.mrp_1147050103.auth;
 
 import android.Manifest;
 import android.content.Intent;
@@ -19,15 +19,15 @@ import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.restaurant.mrp.DashboardActivity;
-import com.restaurant.mrp.R;
-import com.restaurant.mrp.data.Session;
-import com.restaurant.mrp.model.LoginResponse;
-import com.restaurant.mrp.utils.DialogUtils;
+import com.restaurant.mrp_1147050103.DashboardActivity;
+import com.restaurant.mrp_1147050103.R;
+import com.restaurant.mrp_1147050103.data.Session;
+import com.restaurant.mrp_1147050103.model.LoginResponse;
+import com.restaurant.mrp_1147050103.utils.DialogUtils;
 
 import java.util.List;
 
-import static com.restaurant.mrp.data.Constans.LOGIN;
+import static com.restaurant.mrp_1147050103.data.Constans.LOGIN;
 
 public class LoginActivity extends AppCompatActivity {
     Button btnLogin;

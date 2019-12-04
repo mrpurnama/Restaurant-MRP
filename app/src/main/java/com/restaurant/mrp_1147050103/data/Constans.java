@@ -1,4 +1,4 @@
-package com.restaurant.mrp.data;
+package com.restaurant.mrp_1147050103.data;
 
 public class Constans {
     ///Restoran

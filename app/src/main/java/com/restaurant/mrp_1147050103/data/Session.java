@@ -1,12 +1,12 @@
-package com.restaurant.mrp.data;
+package com.restaurant.mrp_1147050103.data;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.restaurant.mrp.DashboardActivity;
-import com.restaurant.mrp.auth.LoginActivity;
+import com.restaurant.mrp_1147050103.DashboardActivity;
+import com.restaurant.mrp_1147050103.auth.LoginActivity;
 
 public class Session {
     SharedPreferences pref;

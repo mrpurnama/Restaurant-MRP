@@ -1,4 +1,4 @@
-package com.restaurant.mrp.adapter;
+package com.restaurant.mrp_1147050103.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,8 +10,8 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.restaurant.mrp.R;
-import com.restaurant.mrp.model.RestaurantItem;
+import com.restaurant.mrp_1147050103.R;
+import com.restaurant.mrp_1147050103.model.RestaurantItem;
 
 import java.util.ArrayList;
 import java.util.List;

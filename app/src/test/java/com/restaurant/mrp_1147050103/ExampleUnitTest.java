@@ -1,4 +1,4 @@
-package com.restaurant.mrp;
+package com.restaurant.mrp_1147050103;
 
 import org.junit.Test;
 

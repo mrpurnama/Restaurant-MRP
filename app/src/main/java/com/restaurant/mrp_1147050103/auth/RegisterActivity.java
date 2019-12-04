@@ -1,4 +1,4 @@
-package com.restaurant.mrp.auth;
+package com.restaurant.mrp_1147050103.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,12 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
-import com.restaurant.mrp.R;
-import com.restaurant.mrp.model.RegisterResponse;
-import com.restaurant.mrp.utils.DialogUtils;
+import com.restaurant.mrp_1147050103.R;
+import com.restaurant.mrp_1147050103.model.RegisterResponse;
+import com.restaurant.mrp_1147050103.utils.DialogUtils;
 
-import static androidx.core.content.ContextCompat.startActivity;
-import static com.restaurant.mrp.data.Constans.REGISTER;
+import static com.restaurant.mrp_1147050103.data.Constans.REGISTER;
 
 public class RegisterActivity extends AppCompatActivity {
     Button btnRegister;
