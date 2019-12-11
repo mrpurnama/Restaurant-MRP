@@ -4,16 +4,16 @@ import com.google.gson.annotations.Expose;
 
 public class LoginResponse {
     @Expose
-    private Login login;
+    private Login data;
     @Expose
     private String message;
     @Expose
     private String status;
     public Login getLogin() {
-        return login;
+        return data;
     }
     public void setLogin(Login login) {
-        this.login = login;
+        this.data = login;
     }
     public String getMessage() {
         return message;

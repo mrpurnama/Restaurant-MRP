@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.restaurant.mrp_1147050103">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,13 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.restaurant.mrp_1147050103.DashboardActivity"/>
-        <activity android:name="com.restaurant.mrp_1147050103.auth.RegisterActivity" />
-        <activity android:name="com.restaurant.mrp_1147050103.auth.LoginActivity" >
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".auth.RegisterActivity" />
+        <activity android:name=".auth.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER"
-                    />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

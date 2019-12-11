@@ -82,6 +82,7 @@ public class LoginActivity extends AppCompatActivity {
                                             response;
                                     if (res.getStatus().equals("success")) {
                                         session.setIsLogin(true);
+                                        session.setUserId(res.getLogin().getUserid()); //tambah in
                                         loginCheck();
                                     } else {
                                         Toast.makeText(LoginActivity.this,
