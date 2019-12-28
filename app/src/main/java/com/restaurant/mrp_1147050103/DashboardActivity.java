@@ -18,8 +18,11 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.restaurant.mrp_1147050103.adapter.RestaurantAdapter;
+import com.restaurant.mrp_1147050103.data.Constans;
 import com.restaurant.mrp_1147050103.data.Session;
 import com.restaurant.mrp_1147050103.model.ListRestaurantResponse;
+import com.restaurant.mrp_1147050103.model.RegisterResponse;
+import com.restaurant.mrp_1147050103.utils.DialogUtils;
 
 import static com.restaurant.mrp_1147050103.data.Constans.GET_LIST_RESTAURANT;
 import static com.restaurant.mrp_1147050103.data.Constans.GET_SEARCH_RESTAURANT;
@@ -77,16 +80,60 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_logout:
-                session.logoutUser();
+            case R.id.menu_add:
+                startActivity(new Intent(DashboardActivity.this,
+                        AddActivity.class));
+                break;
+            case R.id.menu_delete:
+                deleteRestaurant();
                 break;
             case R.id.menu_account:
                 startActivity(new Intent(DashboardActivity.this,
                         ProfileActivity.class));
                 break;
+            case R.id.menu_logout:
+                session.logoutUser();
+                break;
         }
         return true;
     }
+
+    public void deleteRestaurant(){
+
+        DialogUtils.openDialog(this);
+
+        AndroidNetworking.post(Constans.DELETE_RESTORAN+"/"+session.getUserId())
+                .build()
+                .getAsObject(ListRestaurantResponse.class, new
+                        ParsedRequestListener() {
+                            @Override
+                            public void onResponse(Object response) {
+                                if (response instanceof ListRestaurantResponse) {
+                                    ListRestaurantResponse res = (ListRestaurantResponse)
+                                            response;
+                                    if (res.getStatus().equals("success")) {
+                                        Toast.makeText(DashboardActivity.this,
+                                                "Berhasil Menghapus Restaurant", Toast.LENGTH_SHORT).show();
+                                        finish();
+                                    } else {
+                                        Toast.makeText(DashboardActivity.this,
+                                                "Gagal Menghapus", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                DialogUtils.closeDialog();
+                            }
+                            @Override
+                            public void onError(ANError anError) {
+                                Toast.makeText(DashboardActivity.this,
+                                        "Terjadi kesalahan API", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(DashboardActivity.this,
+                                        "Terjadi kesalahan API : "+anError.getCause().toString(),
+                                        Toast.LENGTH_SHORT).show();
+                                DialogUtils.closeDialog();
+                            }
+                        });
+    }
+
 
     //Method untuk set recyclerview
     public void initRecyclerView(){
